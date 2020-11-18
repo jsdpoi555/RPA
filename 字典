@@ -1,5 +1,5 @@
-dim d=""
-d={"ID":"采购商|订单状态|付款方式|总金额"}
+dim d
+d={}
 desktop_path = Sys.GetSystemPath("desktop" )
 wkb = Excel.OpenExcel(desktop_path & "\\易派客平台截数据\\易派客order_id.xlsx",true)
 rmax = Excel.GetRowsCount(wkb,"A")
@@ -12,3 +12,4 @@ Excel.CloseExcel(wkb,false)
 TracePrint(d["ID"])
 
 
+字典不能删，但是能清空，直接d={}就行
