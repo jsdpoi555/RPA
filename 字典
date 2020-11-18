@@ -1,0 +1,14 @@
+dim d=""
+d={"ID":"采购商|订单状态|付款方式|总金额"}
+desktop_path = Sys.GetSystemPath("desktop" )
+wkb = Excel.OpenExcel(desktop_path & "\\易派客平台截数据\\易派客order_id.xlsx",true)
+rmax = Excel.GetRowsCount(wkb,"A")
+for r = 2 to rmax
+    if Excel.ReadCell(wkb,"A","B" & r) =""
+        
+    end if
+next
+Excel.CloseExcel(wkb,false)
+TracePrint(d["ID"])
+
+
